@@ -15,7 +15,7 @@ jobs:
       - name: Replace the KV namespace
         run: sed -i 's/PRESERVED_FOR_ACTIONS/${{ secrets.KV_ID }}/g' wrangler.toml
       - name: Publish
-        uses: lixiang810/wrangler-action@2.0.0-node16
+        uses: lixiang810/wrangler-action@1.4.0-node16
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           preCommands: |
